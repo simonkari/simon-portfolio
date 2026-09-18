@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# PLACEHOLDER: replace with your real domain once deployed (Step 17)
-Sitemap: https://simonkariithi.com/sitemap.xml
+# Live on Vercel — update this if you connect a custom domain later
+Sitemap: https://simon-portfolio-beryl.vercel.app/sitemap.xml

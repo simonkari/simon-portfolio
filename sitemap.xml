@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- PLACEHOLDER: replace the domain below with your real one once deployed (Step 17) -->
+<!-- Live on Vercel — update this if you connect a custom domain later -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://simonkariithi.com/</loc>
+    <loc>https://simon-portfolio-beryl.vercel.app/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
