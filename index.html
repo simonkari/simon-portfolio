@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PLACEHOLDER: replace with your real domain once you buy/connect one in Step 17 -->
+  <link rel="canonical" href="https://simonkariithi.com/">
+
+  <title>Simon Kariithi | Full-Stack Developer & AI Engineer</title>
+  <meta name="description" content="Simon Kariithi is a Full-Stack Developer, AI Engineer and Designer based in Nakuru, Kenya, building fast, accessible web apps and business systems.">
+  <meta name="author" content="Simon Kariithi">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0A0A0B">
+
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Simon Kariithi">
+  <meta property="og:title" content="Simon Kariithi | Full-Stack Developer & AI Engineer">
+  <meta property="og:description" content="I build fast, accessible web apps and business systems, from custom software to AI-powered solutions.">
+  <!-- PLACEHOLDER: replace URL below with your real domain once deployed -->
+  <meta property="og:url" content="https://simonkariithi.com/">
+  <meta property="og:image" content="https://simonkariithi.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Simon Kariithi | Full-Stack Developer & AI Engineer">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Simon Kariithi | Full-Stack Developer & AI Engineer">
+  <meta name="twitter:description" content="I build fast, accessible web apps and business systems, from custom software to AI-powered solutions.">
+  <meta name="twitter:image" content="https://simonkariithi.com/assets/images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <!-- PLACEHOLDER: add assets/favicon.ico + apple-touch-icon.png (180x180) for broader
+       browser/device support — SVG alone doesn't cover every older browser -->
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+
+  <!-- Structured data — helps Google understand this is a Person/professional profile -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Simon Kariithi",
+    "jobTitle": "Full-Stack Developer, AI Engineer, Designer",
+    "description": "Full-Stack Developer, AI Engineer and Designer based in Nakuru, Kenya, building fast, accessible web apps.",
+    "url": "https://simonkariithi.com/",
+    "image": "https://simonkariithi.com/assets/images/og-image.png",
+    "email": "kariithisimon1715@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nakuru",
+      "addressCountry": "KE"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/simon-kariithi-122543234/",
+      "https://github.com/simonkari"
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles (order matters: reset → variables → base → responsive) -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <canvas id="particles-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- ============================================
+       SIDE QUICK-NAV
+       Fixed, right-edge section jumper. Collapses to small dots
+       when idle, expands to icon+label pills while scrolling,
+       on hover, or while focused (keyboard users). Desktop only
+       (hidden below 1024px — see responsive.css) since the mobile
+       hamburger menu already covers this need on small screens.
+  ============================================ -->
+  <nav class="side-nav" id="side-nav" aria-label="Jump to section">
+    <ul class="side-nav__list">
+      <li class="side-nav__item">
+        <a href="#hero" data-section="hero" class="side-nav__link">
+          <span class="side-nav__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+          </span>
+          <span class="side-nav__label">Intro</span>
+        </a>
+      </li>
+      <li class="side-nav__item">
+        <a href="#featured-project" data-section="featured-project" class="side-nav__link">
+          <span class="side-nav__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/></svg>
+          </span>
+          <span class="side-nav__label">Building</span>
+        </a>
+      </li>
+      <li class="side-nav__item">
+        <a href="#projects" data-section="projects" class="side-nav__link">
+          <span class="side-nav__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>
+          </span>
+          <span class="side-nav__label">Projects</span>
+        </a>
+      </li>
+      <li class="side-nav__item">
+        <a href="#services" data-section="services" class="side-nav__link">
+          <span class="side-nav__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+          </span>
+          <span class="side-nav__label">Services</span>
+        </a>
+      </li>
+      <li class="side-nav__item">
+        <a href="#stack" data-section="stack" class="side-nav__link">
+          <span class="side-nav__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg>
+          </span>
+          <span class="side-nav__label">Stack</span>
+        </a>
+      </li>
+      <li class="side-nav__item">
+        <a href="#about" data-section="about" class="side-nav__link">
+          <span class="side-nav__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+          </span>
+          <span class="side-nav__label">About</span>
+        </a>
+      </li>
+      <li class="side-nav__item">
+        <a href="#moments" data-section="moments" class="side-nav__link">
+          <span class="side-nav__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5-9 9"/></svg>
+          </span>
+          <span class="side-nav__label">Moments</span>
+        </a>
+      </li>
+      <li class="side-nav__item">
+        <a href="#writing" data-section="writing" class="side-nav__link">
+          <span class="side-nav__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </span>
+          <span class="side-nav__label">Writing</span>
+        </a>
+      </li>
+      <li class="side-nav__item">
+        <a href="#contact" data-section="contact" class="side-nav__link">
+          <span class="side-nav__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>
+          </span>
+          <span class="side-nav__label">Contact</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================
+       NAV
+  ============================================ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#hero" class="nav__logo">Simon<span class="mono">.dev</span></a>
+
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#services" class="nav__link">Services</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#writing" class="nav__link">Writing</a>
+        <a href="#contact" class="nav__link nav__link--cta btn btn-primary">Get in Touch</a>
+      </nav>
+
+      <button
+        class="nav__toggle"
+        id="nav-toggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ============================================
+         HERO
+    ============================================ -->
+    <section id="hero" class="hero" aria-label="Introduction">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__greeting mono">Hi, I'm</p>
+          <h1 class="hero__name">Simon Kariithi</h1>
+          <p class="hero__headline">
+            I build digital solutions that solve real-world problems:
+            fast, accessible web apps from idea to production.
+          </p>
+          <p class="hero__roles mono">
+            Full-Stack Developer <span aria-hidden="true">•</span> AI Engineer <span aria-hidden="true">•</span> Designer
+          </p>
+
+          <div class="hero__cta">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Book a Call</a>
+          </div>
+
+          <div class="hero__stats" role="group" aria-label="Career stats">
+            <!-- PLACEHOLDER: update data-count-to on Projects Built / Happy Clients with your real numbers (also mirrored in projects.json → stats) -->
+            <div class="stat">
+              <p class="stat__number" data-count-to="5" data-suffix="+">0</p>
+              <p class="stat__label text-secondary">Years Experience</p>
+            </div>
+            <div class="stat">
+              <p class="stat__number" data-count-to="12" data-suffix="+">0</p>
+              <p class="stat__label text-secondary">Projects Built</p>
+            </div>
+            <div class="stat">
+              <p class="stat__number" data-count-to="8" data-suffix="+">0</p>
+              <p class="stat__label text-secondary">Happy Clients</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__photo">
+          <div class="hero__photo-ring">
+            <img
+              src="assets/images/headshot.jpg"
+              alt="Photo of Simon Kariithi"
+              onerror="this.style.display='none'; this.parentElement.classList.add('hero__photo-ring--empty')"
+            >
+          </div>
+        </div>
+      </div>
+
+      <a href="#featured-project" class="hero__scroll" aria-label="Scroll to next section">
+        <span class="hero__scroll-dot"></span>
+      </a>
+    </section>
+
+    <!-- ============================================
+         LIVE CODE WIDGET
+         Animated "typewriter" code editor mockup — types out
+         real info about Simon, line by line, syntax-highlighted,
+         then pauses, deletes, and loops. Content lives in
+         js/code-widget.js as a plain data array — edit the
+         `codeLines` array there to change what it types.
+    ============================================ -->
+    <section id="live-code" class="live-code" aria-label="A quick look at how I work">
+      <div class="container">
+        <div class="code-window reveal">
+          <div class="code-window__bar">
+            <div class="code-window__dots">
+              <span></span><span></span><span></span>
+            </div>
+            <p class="code-window__title mono">whoami.js</p>
+            <div class="code-window__status">
+              <span class="code-window__status-dot" id="code-status-dot"></span>
+              <span class="mono" id="code-status-text">Idle</span>
+            </div>
+          </div>
+          <div class="code-window__body">
+            <div class="code-lines" id="code-lines" aria-hidden="true"></div>
+            <!-- Real, non-animated fallback for screen readers / no-JS -->
+            <pre class="sr-only">const simon = {
+  role: 'Full-Stack Developer',
+  skills: ['AI', 'Cloud', 'APIs'],
+  location: 'Nakuru, Kenya',
+};
+
+while (simon.isBuilding) {
+  ship(cleanCode());
+  learn(somethingNew());
+}</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         FEATURED PROJECT
+    ============================================ -->
+    <section id="featured-project" class="featured" aria-label="Featured project">
+      <div class="container featured__inner">
+        <div class="featured__content reveal">
+          <p class="featured__eyebrow mono">What I'm Building</p>
+          <h2 class="featured__title">Mama's Kitchen</h2>
+          <p class="featured__tagline text-secondary">
+            Ordering page for a home catering side hustle
+          </p>
+          <p class="featured__description text-secondary">
+            Mama's Kitchen took orders through WhatsApp, calls, and Instagram DMs, with no visible
+            menu or prices and messages getting lost in the scroll while she cooked. I built a
+            single mobile-first page where customers can see today's menu, place an order in under
+            a minute, and send it straight to her WhatsApp as a ready-to-send message. There's no
+            app and no payment system, just a clean front door.
+          </p>
+
+          <p class="featured__metric">
+            <span class="featured__metric-value">42 Online Orders in 6 Weeks</span>
+            <span class="text-muted"> · Order-related messages down ~60%</span>
+          </p>
+
+          <ul class="tag-list" aria-label="Technologies used">
+            <li class="tag mono">Next.js</li>
+            <li class="tag mono">Tailwind CSS</li>
+            <li class="tag mono">Framer Motion</li>
+            <li class="tag mono">WhatsApp API</li>
+          </ul>
+
+          <div class="featured__cta">
+            <a href="#" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Visit Live Demo</a>
+            <a href="#" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Code</a>
+          </div>
+        </div>
+
+        <div class="featured__media reveal">
+          <div class="browser-frame">
+            <div class="browser-frame__bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="browser-frame__screen">
+              <!-- PLACEHOLDER: swap for a real screenshot -->
+              <img
+              loading="lazy"
+              decoding="async"
+                src="assets/images/projects/featured-placeholder.png"
+                alt="Screenshot placeholder for featured project. Replace with a real screenshot."
+                onerror="this.style.display='none'; this.parentElement.classList.add('browser-frame__screen--empty')"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         PROJECTS GALLERY
+    ============================================ -->
+    <section id="projects" class="projects" aria-label="All projects">
+      <div class="container">
+        <p class="section-eyebrow mono">All My Projects</p>
+        <h2 class="section-title">Things I've Built</h2>
+        <p class="section-subtitle text-secondary">
+          A selection of apps and systems I've designed, built, and shipped.
+        </p>
+
+        <div class="projects__grid">
+
+          <!-- PLACEHOLDER PROJECT 1 — mirrors projects.json → projects[0] -->
+          <article class="project-card reveal">
+            <div class="project-card__thumb">
+              <span class="project-card__index mono" aria-hidden="true">01</span>
+              <!-- PLACEHOLDER: status badge — change to "Live" or delete once the project is finished -->
+              <span class="project-card__status"><span class="project-card__status-dot"></span>In Progress</span>
+              <img
+              loading="lazy"
+              decoding="async"
+                src="assets/images/projects/airbnb-placeholder.png"
+                alt=""
+                onerror="this.style.display='none'; this.parentElement.classList.add('project-card__thumb--empty')"
+              >
+              <span class="project-card__view" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Airbnb</h3>
+              <p class="project-card__desc text-secondary">
+                PLACEHOLDER: short description of what this project does and the problem it solves.
+              </p>
+              <ul class="tag-list tag-list--sm" aria-label="Technologies used">
+                <li class="tag mono">PLACEHOLDER</li>
+                <li class="tag mono">PLACEHOLDER</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="#" target="_blank" rel="noopener noreferrer">Live Demo &rarr;</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PLACEHOLDER PROJECT 2 — mirrors projects.json → projects[1] -->
+          <article class="project-card reveal">
+            <div class="project-card__thumb">
+              <span class="project-card__index mono" aria-hidden="true">02</span>
+              <span class="project-card__status"><span class="project-card__status-dot"></span>In Progress</span>
+              <img
+              loading="lazy"
+              decoding="async"
+                src="assets/images/projects/movie-app-placeholder.png"
+                alt=""
+                onerror="this.style.display='none'; this.parentElement.classList.add('project-card__thumb--empty')"
+              >
+              <span class="project-card__view" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Movie-App</h3>
+              <p class="project-card__desc text-secondary">
+                PLACEHOLDER: short description of what this project does and the problem it solves.
+              </p>
+              <ul class="tag-list tag-list--sm" aria-label="Technologies used">
+                <li class="tag mono">PLACEHOLDER</li>
+                <li class="tag mono">PLACEHOLDER</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="#" target="_blank" rel="noopener noreferrer">Live Demo &rarr;</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PLACEHOLDER PROJECT 3 — mirrors projects.json → projects[2] -->
+          <article class="project-card reveal">
+            <div class="project-card__thumb">
+              <span class="project-card__index mono" aria-hidden="true">03</span>
+              <span class="project-card__status"><span class="project-card__status-dot"></span>In Progress</span>
+              <img
+              loading="lazy"
+              decoding="async"
+                src="assets/images/projects/clockin-app-placeholder.png"
+                alt=""
+                onerror="this.style.display='none'; this.parentElement.classList.add('project-card__thumb--empty')"
+              >
+              <span class="project-card__view" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Clockin-App</h3>
+              <p class="project-card__desc text-secondary">
+                PLACEHOLDER: short description of what this project does and the problem it solves.
+              </p>
+              <ul class="tag-list tag-list--sm" aria-label="Technologies used">
+                <li class="tag mono">PLACEHOLDER</li>
+                <li class="tag mono">PLACEHOLDER</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="#" target="_blank" rel="noopener noreferrer">Live Demo &rarr;</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PLACEHOLDER PROJECT 4 — mirrors projects.json → projects[3] -->
+          <article class="project-card reveal">
+            <div class="project-card__thumb">
+              <span class="project-card__index mono" aria-hidden="true">04</span>
+              <span class="project-card__status"><span class="project-card__status-dot"></span>In Progress</span>
+              <img
+              loading="lazy"
+              decoding="async"
+                src="assets/images/projects/invoicing-app-placeholder.png"
+                alt=""
+                onerror="this.style.display='none'; this.parentElement.classList.add('project-card__thumb--empty')"
+              >
+              <span class="project-card__view" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Invoicing-App</h3>
+              <p class="project-card__desc text-secondary">
+                PLACEHOLDER: short description of what this project does and the problem it solves.
+              </p>
+              <ul class="tag-list tag-list--sm" aria-label="Technologies used">
+                <li class="tag mono">PLACEHOLDER</li>
+                <li class="tag mono">PLACEHOLDER</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="#" target="_blank" rel="noopener noreferrer">Live Demo &rarr;</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Code &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SERVICES
+    ============================================ -->
+    <section id="services" class="services" aria-label="How I can help">
+      <div class="container">
+        <p class="section-eyebrow mono">How I Can Help</p>
+        <h2 class="section-title">Services</h2>
+        <p class="section-subtitle text-secondary">
+          Custom software, business systems, and the infrastructure behind them, built end to end.
+        </p>
+
+        <div class="services__grid">
+
+          <article class="service-card reveal">
+            <p class="service-card__category text-muted mono">Build &amp; Ship</p>
+            <h3 class="service-card__title">Custom Software Development</h3>
+            <p class="service-card__desc text-secondary">
+              I design and build custom software tailored to your workflow, from the ground up.
+            </p>
+            <ul class="service-card__list text-secondary">
+              <li>Custom software development</li>
+              <li>Web application development</li>
+              <li>Mobile app development</li>
+              <li>Desktop application development</li>
+            </ul>
+            <p class="service-card__best text-muted">Best for: businesses needing a bespoke application built from scratch.</p>
+            <a href="#contact" class="service-card__link">Get in touch &rarr;</a>
+          </article>
+
+          <article class="service-card reveal">
+            <p class="service-card__category text-muted mono">Build &amp; Ship</p>
+            <h3 class="service-card__title">Business &amp; Operations Systems</h3>
+            <p class="service-card__desc text-secondary">
+              Turning manual business processes into reliable, easy-to-use systems.
+            </p>
+            <ul class="service-card__list text-secondary">
+              <li>Business management &amp; inventory systems</li>
+              <li>POS &amp; staff / attendance systems</li>
+              <li>Expense tracking &amp; rental/property management</li>
+              <li>Customer management (CRM) &amp; bookings</li>
+            </ul>
+            <p class="service-card__best text-muted">Best for: businesses replacing spreadsheets with real tools.</p>
+            <a href="#contact" class="service-card__link">Get in touch &rarr;</a>
+          </article>
+
+          <article class="service-card reveal">
+            <p class="service-card__category text-muted mono">Build &amp; Ship</p>
+            <h3 class="service-card__title">E-Commerce &amp; Integrations</h3>
+            <p class="service-card__desc text-secondary">
+              Sell online and connect the tools your business already runs on.
+            </p>
+            <ul class="service-card__list text-secondary">
+              <li>E-commerce application development</li>
+              <li>API development &amp; integration</li>
+            </ul>
+            <p class="service-card__best text-muted">Best for: businesses ready to sell online or connect existing systems.</p>
+            <a href="#contact" class="service-card__link">Get in touch &rarr;</a>
+          </article>
+
+          <article class="service-card reveal">
+            <p class="service-card__category text-muted mono">Advise &amp; Build</p>
+            <h3 class="service-card__title">Cloud &amp; Data Engineering</h3>
+            <p class="service-card__desc text-secondary">
+              Solid data foundations and cloud infrastructure that scales with you.
+            </p>
+            <ul class="service-card__list text-secondary">
+              <li>Database design &amp; development</li>
+              <li>Cloud-based application development</li>
+            </ul>
+            <p class="service-card__best text-muted">Best for: teams that need data and infrastructure done right from day one.</p>
+            <a href="#contact" class="service-card__link">Get in touch &rarr;</a>
+          </article>
+
+        </div>
+
+        <div class="services__footer">
+          <p class="text-secondary">Not sure which fits? Tell me what you're trying to solve and we'll figure it out together.</p>
+          <a href="#contact" class="btn btn-secondary">Book a Free Call</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         TECH STACK — infinite-loop logo marquee
+         Edit the <ul id="marquee-list"> below to add/remove
+         technologies — js/marquee.js automatically duplicates
+         it for the seamless loop and recalculates timing, so
+         you never touch the JS or CSS to update this list.
+    ============================================ -->
+    <section id="stack" class="stack" aria-label="Technologies I work with">
+      <div class="container">
+        <p class="section-eyebrow mono">Tech Stack</p>
+        <h2 class="section-title">Tools &amp; Technologies</h2>
+        <p class="section-subtitle text-secondary">A few things in my toolkit, and always growing.</p>
+      </div>
+
+      <div class="marquee">
+        <div class="marquee__fade marquee__fade--left" aria-hidden="true"></div>
+        <div class="marquee__fade marquee__fade--right" aria-hidden="true"></div>
+
+        <div class="marquee__track" id="marquee-track">
+          <ul class="marquee__list" id="marquee-list" aria-label="Technologies I work with">
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>JavaScript</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>TypeScript</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>Python</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>Java</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>PHP</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" alt="Ruby" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>Ruby</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>C++</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>HTML5</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>CSS3</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>React</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>Node.js</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>Git</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>MySQL</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>PostgreSQL</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>MongoDB</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>Docker</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>Kubernetes</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>Nginx</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>Terraform</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>Grafana</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elasticsearch/elasticsearch-original.svg" alt="Elasticsearch" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>Elasticsearch</span></li>
+            <li class="marquee__item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" loading="lazy" decoding="async" onerror="this.style.display='none'"><span>Redis</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT / MY STORY
+    ============================================ -->
+    <section id="about" class="about" aria-label="About me">
+      <div class="container about__inner">
+        <div class="about__media reveal">
+          <div class="about__photo">
+            <img
+              loading="lazy"
+              decoding="async"
+              src="assets/images/headshot.jpg"
+              alt="Photo of Simon Kariithi"
+              onerror="this.style.display='none'; this.parentElement.classList.add('about__photo--empty')"
+            >
+          </div>
+          <p class="about__location mono">
+            <span class="about__location-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0114 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+            </span>
+            Nakuru, Kenya
+          </p>
+        </div>
+
+        <div class="about__content reveal">
+          <p class="section-eyebrow mono">Who I Am</p>
+          <h2 class="section-title">My Story</h2>
+
+          <!-- PLACEHOLDER: this is a starting draft built only from what you've told me.
+               Replace/expand with your real journey — how you got into dev, what drives you,
+               a specific moment or project that shaped how you work, etc. -->
+          <p class="about__paragraph text-secondary">
+            I'm Simon Kariithi, a Full-Stack Developer, AI Engineer, and Designer based in Nakuru, Kenya.
+            Over the past 5 years, I've focused on building software that solves real, practical problems,
+            including business management systems, CRMs, booking platforms, and e-commerce applications.
+          </p>
+          <p class="about__paragraph text-secondary">
+            <!-- PLACEHOLDER: add specifics — what got you into software, a project you're proud of, how you work with clients -->
+            PLACEHOLDER: add a paragraph about how you got started, what kind of problems excite you most,
+            and how you like to work with clients or teams.
+          </p>
+
+          <ul class="skills-list" aria-label="Key skills">
+            <li class="tag mono">Programming Languages</li>
+            <li class="tag mono">Version Control (Git)</li>
+            <li class="tag mono">Databases &amp; APIs</li>
+            <li class="tag mono">Testing &amp; Debugging</li>
+            <li class="tag mono">Cloud &amp; Containerization</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         RANDOM MOMENTS
+         Concept inspired by zalt.me's candid-photo gallery
+         (structure/placement only — wording is original, per
+         this project's "no copied text" rule).
+    ============================================ -->
+    <section id="moments" class="moments" aria-label="Random moments">
+      <div class="container">
+        <p class="section-eyebrow mono">Random Moments</p>
+        <h2 class="section-title">A Few Snapshots Along the Way</h2>
+        <p class="section-subtitle text-secondary">
+          Not everything is a pull request. Here's some of the rest.
+        </p>
+      </div>
+
+      <!-- PLACEHOLDER: drop your own candid photos into assets/images/moments/,
+           swap the src/alt/caption on each slide below. Add or remove
+           <li class="moments-slide"> blocks freely — the carousel, dots, and
+           arrows all rebuild themselves automatically from however many
+           slides are here (see js/moments-carousel.js). -->
+      <div class="moments-carousel" id="moments-carousel" role="region" aria-roledescription="carousel" aria-label="Photo carousel" tabindex="0">
+        <button type="button" class="moments-carousel__arrow moments-carousel__arrow--prev" id="moments-prev" aria-label="Previous photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+
+        <ul class="moments-carousel__track" id="moments-track">
+          <li class="moments-slide" data-index="0">
+            <div class="moments-slide__frame">
+              <span class="moments-slide__corner moments-slide__corner--tl" aria-hidden="true"></span>
+              <span class="moments-slide__corner moments-slide__corner--tr" aria-hidden="true"></span>
+              <span class="moments-slide__corner moments-slide__corner--bl" aria-hidden="true"></span>
+              <span class="moments-slide__corner moments-slide__corner--br" aria-hidden="true"></span>
+              <img
+                src="assets/images/moments/moment-1.jpg"
+                alt="PLACEHOLDER: describe this photo"
+                loading="lazy"
+                decoding="async"
+                onerror="this.style.display='none'; this.parentElement.classList.add('moments-slide__frame--empty')"
+              >
+              <p class="moments-slide__caption">PLACEHOLDER caption</p>
+            </div>
+          </li>
+          <li class="moments-slide" data-index="1">
+            <div class="moments-slide__frame">
+              <span class="moments-slide__corner moments-slide__corner--tl" aria-hidden="true"></span>
+              <span class="moments-slide__corner moments-slide__corner--tr" aria-hidden="true"></span>
+              <span class="moments-slide__corner moments-slide__corner--bl" aria-hidden="true"></span>
+              <span class="moments-slide__corner moments-slide__corner--br" aria-hidden="true"></span>
+              <img
+                src="assets/images/moments/moment-2.jpg"
+                alt="PLACEHOLDER: describe this photo"
+                loading="lazy"
+                decoding="async"
+                onerror="this.style.display='none'; this.parentElement.classList.add('moments-slide__frame--empty')"
+              >
+              <p class="moments-slide__caption">PLACEHOLDER caption</p>
+            </div>
+          </li>
+          <li class="moments-slide" data-index="2">
+            <div class="moments-slide__frame">
+              <span class="moments-slide__corner moments-slide__corner--tl" aria-hidden="true"></span>
+              <span class="moments-slide__corner moments-slide__corner--tr" aria-hidden="true"></span>
+              <span class="moments-slide__corner moments-slide__corner--bl" aria-hidden="true"></span>
+              <span class="moments-slide__corner moments-slide__corner--br" aria-hidden="true"></span>
+              <img
+                src="assets/images/moments/moment-3.jpg"
+                alt="PLACEHOLDER: describe this photo"
+                loading="lazy"
+                decoding="async"
+                onerror="this.style.display='none'; this.parentElement.classList.add('moments-slide__frame--empty')"
+              >
+              <p class="moments-slide__caption">PLACEHOLDER caption</p>
+            </div>
+          </li>
+          <li class="moments-slide" data-index="3">
+            <div class="moments-slide__frame">
+              <span class="moments-slide__corner moments-slide__corner--tl" aria-hidden="true"></span>
+              <span class="moments-slide__corner moments-slide__corner--tr" aria-hidden="true"></span>
+              <span class="moments-slide__corner moments-slide__corner--bl" aria-hidden="true"></span>
+              <span class="moments-slide__corner moments-slide__corner--br" aria-hidden="true"></span>
+              <img
+                src="assets/images/moments/moment-4.jpg"
+                alt="PLACEHOLDER: describe this photo"
+                loading="lazy"
+                decoding="async"
+                onerror="this.style.display='none'; this.parentElement.classList.add('moments-slide__frame--empty')"
+              >
+              <p class="moments-slide__caption">PLACEHOLDER caption</p>
+            </div>
+          </li>
+        </ul>
+
+        <button type="button" class="moments-carousel__arrow moments-carousel__arrow--next" id="moments-next" aria-label="Next photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <div class="moments-carousel__dots" id="moments-dots" role="tablist" aria-label="Choose a photo"></div>
+    </section>
+
+    <!-- ============================================
+         WRITING
+    ============================================ -->
+    <section id="writing" class="writing" aria-label="Writing">
+      <div class="container">
+        <p class="section-eyebrow mono">Writing</p>
+        <h2 class="section-title">Latest Writing</h2>
+        <p class="section-subtitle text-secondary">
+          Notes on building software, from the systems I ship.
+        </p>
+
+        <!-- PLACEHOLDER: no posts published yet — these are suggested topics based on your
+             real project work. Replace title/excerpt/date/link once you publish, or delete
+             any card you don't want. Add more <article class="article-card reveal"> blocks the
+             same way as your list grows. -->
+        <div class="writing__grid">
+
+          <article class="article-card reveal">
+            <p class="article-card__meta text-muted mono">Coming soon</p>
+            <h3 class="article-card__title">Building a POS System From Scratch</h3>
+            <p class="article-card__excerpt text-secondary">
+              What it actually takes to build a point-of-sale system business owners can rely on,
+              from offline-first data handling to receipt printing.
+            </p>
+            <a href="#" class="article-card__link">Read article &rarr;</a>
+          </article>
+
+          <article class="article-card reveal">
+            <p class="article-card__meta text-muted mono">Coming soon</p>
+            <h3 class="article-card__title">Designing APIs for Multi-Tenant Systems</h3>
+            <p class="article-card__excerpt text-secondary">
+              Lessons from building business management systems that need to serve many
+              customers securely from one codebase.
+            </p>
+            <a href="#" class="article-card__link">Read article &rarr;</a>
+          </article>
+
+          <article class="article-card reveal">
+            <p class="article-card__meta text-muted mono">Coming soon</p>
+            <h3 class="article-card__title">What I Learned Shipping an Invoicing App</h3>
+            <p class="article-card__excerpt text-secondary">
+              Real-world edge cases in billing software, including currencies, partial payments,
+              and keeping small business owners' books accurate.
+            </p>
+            <a href="#" class="article-card__link">Read article &rarr;</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SITE ANALYTICS
+         A "proof of traction" widget — real dashboard styling,
+         but SAMPLE data until this site is live and connected to
+         a real analytics provider. All numbers live in one data
+         object at the top of js/analytics-widget.js — swap them
+         for real figures (from Plausible, Fathom, Vercel
+         Analytics, etc.) once you have traffic to show.
+    ============================================ -->
+    <section id="analytics" class="analytics" aria-label="Site analytics">
+      <div class="container">
+        <div class="analytics-window reveal">
+          <div class="analytics-window__bar">
+            <div class="code-window__dots">
+              <span></span><span></span><span></span>
+            </div>
+            <p class="analytics-window__title mono">Site Analytics</p>
+            <div class="analytics-window__meta">
+              <span class="analytics-window__range mono" id="analytics-range">Last 2 weeks</span>
+              <span class="analytics-window__privacy">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg>
+                Privacy-friendly
+              </span>
+            </div>
+          </div>
+
+          <div class="analytics-window__body">
+            <p class="analytics-summary" id="analytics-summary">
+              Most readers this fortnight from <strong id="analytics-top-country">—</strong>.
+            </p>
+
+            <div class="analytics-stats" role="group" aria-label="Traffic summary">
+              <div class="analytics-stat">
+                <p class="analytics-stat__number" id="analytics-visitors" data-count-to="0">0</p>
+                <p class="analytics-stat__label text-secondary">Visitors</p>
+              </div>
+              <div class="analytics-stat">
+                <p class="analytics-stat__number" id="analytics-pageviews" data-count-to="0">0</p>
+                <p class="analytics-stat__label text-secondary">Page Views</p>
+              </div>
+              <div class="analytics-stat">
+                <p class="analytics-stat__number" id="analytics-countries" data-count-to="0">0</p>
+                <p class="analytics-stat__label text-secondary">Countries</p>
+              </div>
+            </div>
+
+            <div class="analytics-grid">
+              <div class="analytics-panel analytics-panel--chart">
+                <p class="analytics-panel__title mono">Page views per day</p>
+                <div id="analytics-chart" class="analytics-chart" aria-hidden="true"></div>
+                <div class="analytics-chart__legend">
+                  <span><span class="dot dot--views"></span>Views</span>
+                  <span><span class="dot dot--visitors"></span>Visitors</span>
+                </div>
+              </div>
+
+              <div class="analytics-panel">
+                <p class="analytics-panel__title mono">Top 5 countries</p>
+                <ul class="analytics-countries" id="analytics-countries-list"></ul>
+              </div>
+
+              <div class="analytics-panel analytics-panel--donut">
+                <p class="analytics-panel__title mono">Visitor devices</p>
+                <div class="analytics-donut-wrap">
+                  <svg id="analytics-donut" class="analytics-donut" viewBox="0 0 120 120" aria-hidden="true"></svg>
+                  <ul class="analytics-donut-legend" id="analytics-donut-legend"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="analytics-disclaimer text-muted mono">
+          Sample data. This widget will show real numbers once the site is live and connected to an analytics provider.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT
+    ============================================ -->
+    <section id="contact" class="contact" aria-label="Get in touch">
+      <div class="container">
+        <p class="section-eyebrow mono">Get in Touch</p>
+        <h2 class="section-title">Let's Build Something</h2>
+        <p class="section-subtitle text-secondary">
+          Have a project in mind, or just want to talk it through? Reach out.
+        </p>
+
+        <div class="contact__cards">
+          <a href="mailto:kariithisimon1715@gmail.com" class="contact-card reveal">
+            <span class="contact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>
+            </span>
+            <p class="contact-card__label text-muted mono">Email</p>
+            <p class="contact-card__value">kariithisimon1715@gmail.com</p>
+          </a>
+
+          <!-- PLACEHOLDER: add your phone number, or delete this card -->
+          <a href="tel:+254PLACEHOLDER" class="contact-card reveal">
+            <span class="contact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.4 2.1L8 9.9a16 16 0 006 6l1.4-1.4a2 2 0 012.1-.4c.9.3 1.8.5 2.7.6a2 2 0 011.8 2.2z"/></svg>
+            </span>
+            <p class="contact-card__label text-muted mono">Phone</p>
+            <p class="contact-card__value">+254 PLACEHOLDER</p>
+          </a>
+
+          <!-- PLACEHOLDER: replace with your real Calendly (or similar) link -->
+          <a href="#" target="_blank" rel="noopener noreferrer" class="contact-card reveal">
+            <span class="contact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg>
+            </span>
+            <p class="contact-card__label text-muted mono">Book a Call</p>
+            <p class="contact-card__value">Schedule 20 min &rarr;</p>
+          </a>
+
+          <a href="https://www.linkedin.com/in/simon-kariithi-122543234/" target="_blank" rel="noopener noreferrer" class="contact-card reveal">
+            <span class="contact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7"/><circle cx="7" cy="6.5" r="0.6" fill="currentColor" stroke="none"/><path d="M11 17v-4.5a2 2 0 014-.3V17"/><path d="M11 10.5V17"/></svg>
+            </span>
+            <p class="contact-card__label text-muted mono">LinkedIn</p>
+            <p class="contact-card__value">Connect &rarr;</p>
+          </a>
+        </div>
+
+        <form
+          id="contact-form"
+          class="contact-form reveal"
+          action="https://formspree.io/f/xyzjwnjz"
+          method="POST"
+          novalidate
+        >
+          <!-- Spam honeypot — real users never see or fill this; bots often do -->
+          <input type="text" name="_gotcha" class="sr-only" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_subject" value="New message from your portfolio contact form">
+
+          <div class="contact-form__row">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+              <span class="form-field__error" data-error-for="name"></span>
+            </div>
+            <div class="form-field">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+              <span class="form-field__error" data-error-for="email"></span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="form-field__error" data-error-for="message"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="contact-submit">Send Message</button>
+
+          <p class="contact-form__status" id="contact-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================================
+         NEWSLETTER / CTA BAND
+    ============================================ -->
+    <section id="newsletter" class="newsletter" aria-label="Newsletter signup">
+      <div class="container">
+        <div class="newsletter__band reveal">
+          <div class="newsletter__copy">
+            <h2 class="newsletter__title">Stay in Touch</h2>
+            <p class="text-secondary">An occasional note when I ship or write something new. Unsubscribe anytime.</p>
+          </div>
+
+          <!-- Newsletter signups go to a dedicated Formspree form, kept
+               separate from contact messages. -->
+          <form
+            id="newsletter-form"
+            class="newsletter-form"
+            action="https://formspree.io/f/mnpnnove"
+            method="POST"
+            novalidate
+          >
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input
+              type="email"
+              id="newsletter-email"
+              name="newsletter-email"
+              placeholder="you@example.com"
+              required
+              autocomplete="email"
+            >
+            <button type="submit" class="btn btn-primary">Keep Me Posted</button>
+          </form>
+        </div>
+        <p class="newsletter-form__status" id="newsletter-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+  ============================================ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__name">Designed &amp; Developed by <span class="footer__name-highlight">Simon Kariithi</span></p>
+
+      <ul class="footer__socials" aria-label="Social links">
+        <li>
+          <a href="https://www.linkedin.com/in/simon-kariithi-122543234/" target="_blank" rel="noopener noreferrer" class="footer__social-btn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7"/><circle cx="7" cy="6.5" r="0.6" fill="currentColor" stroke="none"/><path d="M11 17v-4.5a2 2 0 014-.3V17"/><path d="M11 10.5V17"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/simonkari" target="_blank" rel="noopener noreferrer" class="footer__social-btn" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.3 6.84 9.65.5.1.68-.22.68-.5 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.22-3.37-1.22-.45-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.55 2.36 1.1 2.94.84.09-.66.35-1.1.63-1.35-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.28 9.28 0 015 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.95.68 1.92 0 1.39-.01 2.5-.01 2.84 0 .28.18.61.69.5A10.02 10.02 0 0022 12.2C22 6.58 17.52 2 12 2z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:kariithisimon1715@gmail.com" class="footer__social-btn" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>
+          </a>
+        </li>
+      </ul>
+
+      <p class="footer__meta text-muted">
+        &copy; <span id="year"></span> Simon Kariithi
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/nav.js" defer></script>
+  <script src="js/counters.js" defer></script>
+  <script src="js/reveal.js" defer></script>
+  <script src="js/particles.js" defer></script>
+  <script src="js/side-nav.js" defer></script>
+  <script src="js/marquee.js" defer></script>
+  <script src="js/moments-carousel.js" defer></script>
+  <script src="js/analytics-widget.js" defer></script>
+  <script src="js/code-widget.js" defer></script>
+  <script src="js/contact.js" defer></script>
+  <script src="js/newsletter.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

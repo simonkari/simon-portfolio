@@ -1,0 +1,63 @@
+{
+  "featured": {
+    "id": "featured-project",
+    "title": "Mama's Kitchen",
+    "tagline": "Ordering page for a home catering side hustle",
+    "description": "Mama's Kitchen took orders through WhatsApp, calls, and Instagram DMs, with no visible menu or prices and messages getting lost in the scroll while she cooked. I built a single mobile-first page where customers can see today's menu, place an order in under a minute, and send it straight to her WhatsApp as a ready-to-send message.",
+    "metric": "42 Online Orders in 6 Weeks — order-related messages down ~60%",
+    "liveUrl": "https://PLACEHOLDER-live-demo-link.com",
+    "repoUrl": "https://github.com/simonkari/PLACEHOLDER-repo",
+    "image": "assets/images/projects/featured-placeholder.png",
+    "tech": ["Next.js", "Tailwind CSS", "Framer Motion", "WhatsApp API"]
+  },
+  "projects": [
+    {
+      "id": "airbnb-clone",
+      "title": "Airbnb",
+      "description": "PLACEHOLDER — short description of what this project does and the problem it solves.",
+      "liveUrl": "https://PLACEHOLDER.com",
+      "repoUrl": "https://github.com/simonkari/PLACEHOLDER",
+      "image": "assets/images/projects/airbnb-placeholder.png",
+      "tech": ["PLACEHOLDER", "PLACEHOLDER"]
+    },
+    {
+      "id": "movie-app",
+      "title": "Movie-App",
+      "description": "PLACEHOLDER — short description of what this project does and the problem it solves.",
+      "liveUrl": "https://PLACEHOLDER.com",
+      "repoUrl": "https://github.com/simonkari/PLACEHOLDER",
+      "image": "assets/images/projects/movie-app-placeholder.png",
+      "tech": ["PLACEHOLDER", "PLACEHOLDER"]
+    },
+    {
+      "id": "clockin-app",
+      "title": "Clockin-App",
+      "description": "PLACEHOLDER — short description of what this project does and the problem it solves.",
+      "liveUrl": "https://PLACEHOLDER.com",
+      "repoUrl": "https://github.com/simonkari/PLACEHOLDER",
+      "image": "assets/images/projects/clockin-app-placeholder.png",
+      "tech": ["PLACEHOLDER", "PLACEHOLDER"]
+    },
+    {
+      "id": "invoicing-app",
+      "title": "Invoicing-App",
+      "description": "PLACEHOLDER — short description of what this project does and the problem it solves.",
+      "liveUrl": "https://PLACEHOLDER.com",
+      "repoUrl": "https://github.com/simonkari/PLACEHOLDER",
+      "image": "assets/images/projects/invoicing-app-placeholder.png",
+      "tech": ["PLACEHOLDER", "PLACEHOLDER"]
+    }
+  ],
+  "stats": {
+    "yearsExperience": 5,
+    "projectsBuilt": "PLACEHOLDER_NUMBER",
+    "happyClients": "PLACEHOLDER_NUMBER"
+  },
+  "contact": {
+    "email": "kariithisimon1715@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/simon-kariithi-122543234/",
+    "github": "https://github.com/simonkari",
+    "phone": "PLACEHOLDER — optional, add if you want it listed",
+    "bookingUrl": "PLACEHOLDER — your Calendly (or similar) link"
+  }
+}
