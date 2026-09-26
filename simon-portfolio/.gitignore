@@ -1,0 +1,10 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
+
+# Optional local production build (regenerate with the commands in README.md)
+dist/

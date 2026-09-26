@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Live on Vercel — update this if you connect a custom domain later
+Sitemap: https://simon-portfolio-beryl.vercel.app/sitemap.xml
